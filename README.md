@@ -5,158 +5,75 @@ Frontend Developer • React Specialist • TypeScript Enthusiast
 </h3>
 
 <p align="center">
-Building modern, scalable, and performant web applications.
+Building modern, scalable, and performant web applications ⚡
 </p>
 
+---
+
 <p align="center">
-<a href="https://github.com/MKRJ0">
 <img src="https://komarev.com/ghpvc/?username=MKRJ0&label=Profile%20Views&color=0e75b6&style=for-the-badge" />
-</a>
-
-<a href="https://github.com/MKRJ0?tab=followers">
 <img src="https://img.shields.io/github/followers/MKRJ0?logo=github&style=for-the-badge" />
-</a>
-
-<a href="https://github.com/MKRJ0">
-<img src="https://img.shields.io/github/stars/MKRJ0?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge" />
-</a>
+<img src="https://img.shields.io/github/stars/MKRJ0?logo=github&style=for-the-badge" />
 </p>
 
 ---
 
 ## 🚀 About Me
 
-I'm a passionate Frontend Developer focused on creating clean, responsive, and user-friendly web experiences.
+I'm a passionate Frontend Developer focused on building clean, scalable and high-performance web apps.
 
-- ⚛️ Specializing in **React & TypeScript**
-- 🎨 Building modern UI with **Tailwind CSS**
-- 🚀 Learning advanced React architecture and performance optimization
-- 📱 Creating responsive applications across devices
-- 🌱 Continuously improving development workflows and best practices
-- 💡 Passionate about reusable components and scalable codebases
+- ⚛️ React & TypeScript specialist  
+- 🎨 UI development with Tailwind CSS  
+- 🚀 Focused on performance & architecture  
+- 📱 Responsive design across all devices  
+- 💡 Love reusable components & clean code  
 
 ---
 
 ## 🛠 Tech Stack
 
-### Languages
-
-<p>
-<img src="https://skillicons.dev/icons?i=js,ts,html,css" />
-</p>
-
-### Frontend
-
-<p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite" />
-</p>
-
-### Backend
-
-<p>
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" />
-</p>
-
-### Tools & Platforms
-
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,vercel,netlify" />
+<p align="center">
+<img src="https://skillicons.dev/icons?i=js,ts,html,css,react,nextjs,tailwind,vite,nodejs,express,mongodb,git,github,vscode" />
 </p>
 
 ---
 
-## 🎯 Current Focus
-
-```yaml
-Learning:
-  - Advanced React Patterns
-  - TypeScript Mastery
-  - Frontend System Design
-
-Building:
-  - Modern Web Applications
-  - Reusable UI Components
-  - Portfolio Projects
-
-Exploring:
-  - Next.js
-  - Performance Optimization
-  - Full Stack Development
-
-Open To:
-  - Frontend Roles
-  - Freelance Projects
-  - Open Source Contributions
-```
-
----
-
-## 📂 Featured Projects
-
-### 🚀 Project One
-
-A modern web application focused on performance and user experience.
-
-**Tech Stack**
-
-- React
-- TypeScript
-- Tailwind CSS
-- Node.js
-
-**Highlights**
-
-- Responsive Design
-- Fast Performance
-- Reusable Components
-- Clean Architecture
-
-🔗 Repository: Add your project link
-
----
-
-### 🚀 Project Two
-
-A scalable frontend solution with modern development practices.
-
-**Tech Stack**
-
-- React
-- JavaScript
-- Tailwind CSS
-
-**Highlights**
-
-- Mobile First
-- Optimized UX
-- Component Driven
-
-🔗 Repository: Add your project link
-
----
-
-## 📊 GitHub Analytics
+## 📊 GitHub Dashboard
 
 <p align="center">
+
 <img height="170" src="https://github-readme-stats.vercel.app/api?username=MKRJ0&show_icons=true&theme=tokyonight&hide_border=true" />
 
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MKRJ0&layout=compact&theme=tokyonight&hide_border=true" />
+
 </p>
 
 ---
 
-## 🔥 GitHub Streak
+## 🔥 Streak & Activity
 
 <p align="center">
+
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=MKRJ0&theme=tokyonight&hide_border=true" />
+
 </p>
 
 ---
 
-## 📈 Contribution Graph
+## 📈 Contribution Graph (UPGRADED)
 
 <p align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=MKRJ0&theme=tokyo-night&hide_border=true" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=MKRJ0&theme=react-dark&area=true&hide_border=true&custom_title=GitHub%20Activity%20Graph" />
+
+</p>
+
+---
+
+## 🐍 Contribution Snake
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/MKRJ0/MKRJ0/output/github-contribution-grid-snake-dark.svg" />
 </p>
 
 ---
@@ -169,18 +86,18 @@ A scalable frontend solution with modern development practices.
 
 ---
 
-## 🌐 Connect With Me
+## 🎯 Current Focus
 
-<p align="left">
+```yaml
+learning:
+  - Advanced React Patterns
+  - TypeScript Mastery
+  - Frontend System Design
 
-<a href="https://github.com/MKRJ0">
-<img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge"/>
-</a>
+building:
+  - Scalable Web Apps
+  - UI Component Systems
+  - Portfolio Projects
 
-</p>
-
----
-
-<p align="center">
-✨ Code is like art — consistency creates mastery.
-</p> make it supe herfeie 
+goal:
+  - Become Senior Frontend Developer 🚀
