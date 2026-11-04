@@ -1,23 +1,19 @@
 <!-- ═══════════════════════════  HERO  ═══════════════════════════ -->
 <div align="center">
 
-<a href="https://github.com/MKRJ0"><img width="100%" src="./assets/header.svg" alt="MKRJ — Full Stack Developer" /></a>
+<img width="100%" src="./assets/contributions.svg" alt="GitHub contributions" />
 
-<a href="https://github.com/MKRJ0">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=800&color=00D9FF&center=true&vCenter=true&width=700&height=45&lines=%24+whoami+%E2%86%92+Full+Stack+Developer;%24+stack+%E2%86%92+React+%C2%B7+Node.js+%C2%B7+TypeScript+%C2%B7+Docker;%24+building+%E2%86%92+AI-powered+apps+%2B+SaaS;%24+status+%E2%86%92+open+to+new+roles+%F0%9F%9F%A2" alt="Typing intro" />
-</a>
+<img width="100%" src="./assets/hero.svg" alt="MKRJ — Full Stack Developer" />
 
-<br>
-
-<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-00D9FF?style=for-the-badge&logo=github&logoColor=00D9FF&labelColor=0A0E14" /></a>
-<img src="https://img.shields.io/badge/Based_in-Tehran-39FF88?style=for-the-badge&logo=googlemaps&logoColor=39FF88&labelColor=0A0E14" />
-<img src="https://img.shields.io/badge/Status-Open_to_work-39FF88?style=for-the-badge&logo=rocket&logoColor=39FF88&labelColor=0A0E14" />
-<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=PROFILE+VIEWS&color=00D9FF&style=for-the-badge&labelColor=0A0E14" />
+<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-39FF6A?style=for-the-badge&logo=github&logoColor=39FF6A&labelColor=020804" /></a>
+<img src="https://img.shields.io/badge/Based_in-Tehran-7BC98F?style=for-the-badge&logo=googlemaps&logoColor=7BC98F&labelColor=020804" />
+<img src="https://img.shields.io/badge/Status-Open_to_work-7BC98F?style=for-the-badge&logo=rocket&logoColor=7BC98F&labelColor=020804" />
+<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=PROFILE+VIEWS&color=39FF6A&style=for-the-badge&labelColor=020804" />
 
 <!-- TODO: uncomment and fill in once you have them
-<a href="LINKEDIN_URL"><img src="https://img.shields.io/badge/LinkedIn-Connect-00D9FF?style=for-the-badge&logo=linkedin&logoColor=00D9FF&labelColor=0A0E14" /></a>
-<a href="PORTFOLIO_URL"><img src="https://img.shields.io/badge/Portfolio-Visit-00D9FF?style=for-the-badge&logo=vercel&logoColor=00D9FF&labelColor=0A0E14" /></a>
-<a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-Contact-00D9FF?style=for-the-badge&logo=gmail&logoColor=00D9FF&labelColor=0A0E14" /></a>
+<a href="LINKEDIN_URL"><img src="https://img.shields.io/badge/LinkedIn-Connect-39FF6A?style=for-the-badge&logo=linkedin&logoColor=39FF6A&labelColor=020804" /></a>
+<a href="PORTFOLIO_URL"><img src="https://img.shields.io/badge/Portfolio-Visit-39FF6A?style=for-the-badge&logo=vercel&logoColor=39FF6A&labelColor=020804" /></a>
+<a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-Contact-39FF6A?style=for-the-badge&logo=gmail&logoColor=39FF6A&labelColor=020804" /></a>
 -->
 
 </div>
@@ -25,7 +21,7 @@
 <br>
 
 <!-- ═══════════════════════════  ABOUT  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-whoami-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
+## <img src="https://img.shields.io/badge/%3E_-whoami-39FF6A?style=flat-square&labelColor=020804" height="28" />
 
 > **I build production-ready products end to end** — from pixel-perfect, Figma-accurate React UIs
 > to Dockerized Node.js backends, real booking & payment systems, and backend-controlled AI workflows.
@@ -48,7 +44,7 @@ const mkrj = {
 <br>
 
 <!-- ═══════════════════════════  STACK  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-ls_%2Ftech--stack-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
+## <img src="https://img.shields.io/badge/%3E_-ls_%2Ftech--stack-39FF6A?style=flat-square&labelColor=020804" height="28" />
 
 <div align="center">
 
@@ -65,7 +61,7 @@ const mkrj = {
 <br>
 
 <!-- ═══════════════════════════  PROJECTS  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-ls_%2Ffeatured--projects-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
+## <img src="https://img.shields.io/badge/%3E_-ls_%2Ffeatured--projects-39FF6A?style=flat-square&labelColor=020804" height="28" />
 
 <table>
 <tr>
@@ -82,7 +78,7 @@ Reservations, seat/room booking, online payments, and a full admin panel. Built 
 - 🧾 QR-code receipts
 - 📱 Installable PWA
 
-<img src="https://img.shields.io/badge/React-0A0E14?style=flat-square&logo=react&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/TypeScript-0A0E14?style=flat-square&logo=typescript&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/Node.js-0A0E14?style=flat-square&logo=nodedotjs&logoColor=39FF88" /> <img src="https://img.shields.io/badge/Express-0A0E14?style=flat-square&logo=express&logoColor=FFFFFF" /> <img src="https://img.shields.io/badge/MongoDB-0A0E14?style=flat-square&logo=mongodb&logoColor=39FF88" /> <img src="https://img.shields.io/badge/Docker-0A0E14?style=flat-square&logo=docker&logoColor=00D9FF" />
+<img src="https://img.shields.io/badge/React-020804?style=flat-square&logo=react&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/TypeScript-020804?style=flat-square&logo=typescript&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/Node.js-020804?style=flat-square&logo=nodedotjs&logoColor=7BC98F" /> <img src="https://img.shields.io/badge/Express-020804?style=flat-square&logo=express&logoColor=FFFFFF" /> <img src="https://img.shields.io/badge/MongoDB-020804?style=flat-square&logo=mongodb&logoColor=7BC98F" /> <img src="https://img.shields.io/badge/Docker-020804?style=flat-square&logo=docker&logoColor=39FF6A" />
 
 </td>
 <td width="50%" valign="top">
@@ -97,7 +93,7 @@ An assistant that answers from a knowledge base and hands off to backend logic w
 - 🔒 Backend-controlled decision making
 - 🧩 Modular AI workflow design
 
-<img src="https://img.shields.io/badge/Flowise-0A0E14?style=flat-square&logo=flow&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/LangChain-0A0E14?style=flat-square&logo=langchain&logoColor=39FF88" /> <img src="https://img.shields.io/badge/Vector_DB-0A0E14?style=flat-square&logo=databricks&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/Node.js-0A0E14?style=flat-square&logo=nodedotjs&logoColor=39FF88" />
+<img src="https://img.shields.io/badge/Flowise-020804?style=flat-square&logo=flow&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/LangChain-020804?style=flat-square&logo=langchain&logoColor=7BC98F" /> <img src="https://img.shields.io/badge/Vector_DB-020804?style=flat-square&logo=databricks&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/Node.js-020804?style=flat-square&logo=nodedotjs&logoColor=7BC98F" />
 
 </td>
 </tr>
@@ -106,25 +102,25 @@ An assistant that answers from a knowledge base and hands off to backend logic w
 <br>
 
 <!-- ═══════════════════════════  STATS  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-git_log_--stats-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
+## <img src="https://img.shields.io/badge/%3E_-git_log_--stats-39FF6A?style=flat-square&labelColor=020804" height="28" />
 
 <div align="center">
 
-<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MKRJ0&theme=tokyonight" />
+<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MKRJ0&theme=matrix" />
 
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MKRJ0&theme=tokyonight" />
-<img width="49%" src="https://streak-stats.demolab.com/?user=MKRJ0&theme=tokyonight&hide_border=true&background=1A1B27&stroke=00D9FF&ring=39FF88&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=C9D1D9&dates=8B949E" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MKRJ0&theme=matrix" />
+<img width="49%" src="https://streak-stats.demolab.com/?user=MKRJ0&theme=matrix&hide_border=true&background=020804&stroke=39FF6A&ring=7BC98F&fire=39FF6A&currStreakLabel=39FF6A&sideLabels=C9D1D9&dates=8B949E" />
 
-<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MKRJ0&theme=tokyonight" />
-<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MKRJ0&theme=tokyonight" />
-<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MKRJ0&theme=tokyonight&utcOffset=3.5" />
+<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MKRJ0&theme=matrix" />
+<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MKRJ0&theme=matrix" />
+<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MKRJ0&theme=matrix&utcOffset=3.5" />
 
 </div>
 
 <br>
 
 <!-- ═══════════════════════════  FOCUS  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-cat_current--focus.yaml-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
+## <img src="https://img.shields.io/badge/%3E_-cat_current--focus.yaml-39FF6A?style=flat-square&labelColor=020804" height="28" />
 
 ```yaml
 learning:      [Advanced React patterns, Performance optimization, Kubernetes, AI agents & RAG]
@@ -153,8 +149,8 @@ open_to:       [Full Stack, Backend (Node.js/TS), React, AI Application, Junior/
 
 **`> connect`** &nbsp;·&nbsp; Let's build something that makes people say *wow*.
 
-<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-00D9FF?style=for-the-badge&logo=github&logoColor=00D9FF&labelColor=0A0E14" /></a>
+<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-39FF6A?style=for-the-badge&logo=github&logoColor=39FF6A&labelColor=020804" /></a>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:00D9FF,50:003B4A,100:0A0E14&height=140&section=footer&animation=twinkling" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:39FF6A,50:0E4D24,100:020804&height=140&section=footer&animation=twinkling" />
 
 </div>
