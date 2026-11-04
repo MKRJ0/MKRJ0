@@ -106,14 +106,7 @@ An assistant that answers from a knowledge base and hands off to backend logic w
 
 <div align="center">
 
-<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MKRJ0&theme=matrix" />
-
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MKRJ0&theme=matrix" />
-<img width="49%" src="https://streak-stats.demolab.com/?user=MKRJ0&theme=matrix&hide_border=true&background=020804&stroke=39FF6A&ring=7BC98F&fire=39FF6A&currStreakLabel=39FF6A&sideLabels=C9D1D9&dates=8B949E" />
-
-<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MKRJ0&theme=matrix" />
-<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MKRJ0&theme=matrix" />
-<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MKRJ0&theme=matrix&utcOffset=3.5" />
+<img width="100%" src="./assets/stats.svg" alt="GitHub stats" />
 
 </div>
 

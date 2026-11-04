@@ -86,29 +86,103 @@ def build_contributions():
 </svg>'''
     (ASSETS / "contributions.svg").write_text(svg)
     print(f"contributions.svg: {total} contributions, {weeks} weeks")
+    build_stats(days)
+
+
+# ───────────────────────── stats card ─────────────────────────
+def api(path):
+    import json, os
+    headers = {"User-Agent": "profile-asset-builder", "Accept": "application/vnd.github+json"}
+    if os.environ.get("GITHUB_TOKEN"):
+        headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+    req = urllib.request.Request(f"https://api.github.com{path}", headers=headers)
+    return json.load(urllib.request.urlopen(req, timeout=30))
+
+
+def build_stats(days):
+    user = api(f"/users/{USER}")
+    repos = [r for r in api(f"/users/{USER}/repos?per_page=100") if not r["fork"]]
+    stars = sum(r["stargazers_count"] for r in repos)
+    langs = {}
+    for r in repos:
+        for k, v in api(f"/repos/{USER}/{r['name']}/languages").items():
+            langs[k] = langs.get(k, 0) + v
+    total_bytes = sum(langs.values()) or 1
+    top = sorted(langs.items(), key=lambda kv: -kv[1])[:5]
+
+    total = sum(n for _, _, n in days)
+    longest = cur = run = 0
+    for _, _, n in days:
+        run = run + 1 if n else 0
+        longest = max(longest, run)
+    for _, _, n in reversed(days):
+        if n:
+            cur += 1
+        elif cur or _ != days[-1][0]:
+            break
+    active = sum(1 for _, _, n in days if n)
+
+    W, H = 1200, 300
+    rows = [
+        ("contributions", f"{total:,}"), ("active days", str(active)),
+        ("current streak", f"{cur}d"), ("longest streak", f"{longest}d"),
+        ("public repos", str(user["public_repos"])), ("stars earned", str(stars)),
+        ("followers", str(user["followers"])), ("member since", user["created_at"][:4]),
+    ]
+    tiles = []
+    for i, (k, v) in enumerate(rows):
+        x, y = 50 + (i % 4) * 160, 92 + (i // 4) * 96
+        tiles.append(
+            f'<text x="{x}" y="{y + 34}" font-size="34" font-weight="800" fill="#39FF6A">{v}</text>'
+            f'<text x="{x}" y="{y + 60}" font-size="13" fill="#2E9E52">{k}</text>'
+        )
+    bars, lx = [], 740
+    for i, (name, b) in enumerate(top):
+        pct = b / total_bytes
+        y = 100 + i * 36
+        bars.append(
+            f'<text x="{lx}" y="{y + 12}" font-size="14" fill="#B6FFC9">{html.escape(name)}</text>'
+            f'<rect x="{lx + 130}" y="{y}" width="240" height="14" rx="2" fill="#0A1F12"/>'
+            f'<rect x="{lx + 130}" y="{y}" width="{max(4, 240 * pct):.0f}" height="14" rx="2" fill="{GREENS[4 - min(i, 3)]}"/>'
+            f'<text x="{lx + 410}" y="{y + 12}" font-size="13" fill="#2E9E52" text-anchor="end">{pct:.0%}</text>'
+        )
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="GitHub stats for {USER}">
+  <style>text {{ font-family: {FONT}; }}</style>
+  <rect width="{W}" height="{H}" rx="16" fill="{BG}"/>
+  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="#39FF6A" stroke-opacity=".25"/>
+  <text x="50" y="56" font-size="18" fill="#39FF6A"><tspan fill="#2E9E52">$</tspan> git log --stats <tspan fill="#2E9E52">--author={USER}</tspan></text>
+  <text x="{lx}" y="56" font-size="18" fill="#39FF6A"><tspan fill="#2E9E52">$</tspan> top-languages</text>
+  <line x1="700" y1="40" x2="700" y2="{H - 40}" stroke="#39FF6A" stroke-opacity=".2"/>
+  {"".join(tiles)}
+  {"".join(bars)}
+</svg>"""
+    (ASSETS / "stats.svg").write_text(svg)
+    print(f"stats.svg: {total} contributions, streak {cur}/{longest}, langs {[k for k, _ in top]}")
 
 
 # ───────────────────────── hero / portrait ─────────────────────────
-PORTRAIT_GREENS = ["#03140A", "#0A3D1C", "#13682F", "#1F9C45", "#33D461", "#8CFFAA"]
+PORTRAIT_GREENS = ["#020A05", "#062A13", "#0B4720", "#11662E", "#1A8A3E", "#25B04F", "#3DDB68", "#8CFFAA", "#E2FFE9"]
 
 
 def portrait_paths(photo, ox, oy, cols, rows, px):
-    from PIL import Image, ImageDraw, ImageFilter, ImageOps
+    """Render a head-and-shoulders photo as a green phosphor pixel portrait."""
+    from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
-    im = Image.open(photo).convert("L")
-    # head + shoulders crop for the GitHub avatar (400x400 full-body shot)
-    im = im.crop((122, 40, 262, 187))
-    im = ImageOps.autocontrast(im, cutoff=2)
-    # soft mask around head and torso so the busy background falls away
-    mask = Image.new("L", im.size, 0)
-    d = ImageDraw.Draw(mask)
-    d.ellipse((34, 0, 104, 86), fill=255)       # head
-    d.ellipse((4, 74, 136, 240), fill=255)      # shoulders / torso
-    mask = mask.filter(ImageFilter.GaussianBlur(10))
-    edges = im.filter(ImageFilter.FIND_EDGES).filter(ImageFilter.GaussianBlur(0.6))
-    small = im.resize((cols, rows), Image.LANCZOS)
-    small_e = edges.resize((cols, rows), Image.LANCZOS)
-    small_m = mask.resize((cols, rows), Image.LANCZOS)
+    im = Image.open(photo).convert("RGB")
+    w, h = im.size
+    # crop head + shoulders to the panel aspect ratio, anchored near the top
+    cw = int(w * 0.88)
+    ch = int(cw * rows / cols)
+    left = (w - cw) // 2 - int(w * 0.02)
+    top = int(h * 0.07)
+    im = im.crop((left, top, left + cw, top + ch))
+    # weight green/blue heavily so the red studio backdrop drops to black
+    r, g, b = im.split()
+    lum = Image.merge("RGB", (r, g, b)).convert("L", (0.10, 0.75, 0.15, 0))
+    lum = ImageOps.autocontrast(lum, cutoff=1)
+    lum = ImageEnhance.Contrast(lum).enhance(1.25)
+    lum = lum.filter(ImageFilter.UnsharpMask(radius=2, percent=160, threshold=2))
+    small = lum.resize((cols, rows), Image.LANCZOS)
 
     bayer = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]
     levels = len(PORTRAIT_GREENS) - 1
@@ -117,16 +191,15 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
         run_lvl, run_start = 0, 0
         for x in range(cols + 1):
             if x < cols:
-                v = small.getpixel((x, y)) / 255
-                v = min(1.0, v * 0.85 + small_e.getpixel((x, y)) / 255 * 0.9)
-                v *= 0.03 + 0.97 * small_m.getpixel((x, y)) / 255
-                t = (bayer[y % 4][x % 4] + 0.5) / 16 - 0.5
+                v = (small.getpixel((x, y)) / 255) ** 0.9
+                t = ((bayer[y % 4][x % 4] + 0.5) / 16 - 0.5) * 0.6
                 lvl = max(0, min(levels, int(v * levels + t + 0.5)))
             else:
                 lvl = -1
             if lvl != run_lvl or x == cols:
                 if run_lvl > 0:
-                    paths[run_lvl].append(f"M{ox + run_start * px} {oy + y * px}h{(x - run_start) * px}v{px}h-{(x - run_start) * px}z")
+                    n = x - run_start
+                    paths[run_lvl].append(f"M{ox + run_start * px:g} {oy + y * px:g}h{n * px:g}v{px:g}h-{n * px:g}z")
                 run_lvl, run_start = lvl, x
     return "".join(
         f'<path fill="{PORTRAIT_GREENS[l]}" d="{"".join(p)}"/>' for l, p in paths.items() if p
@@ -135,7 +208,7 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
 
 def build_hero(photo):
     W, H = 1200, 440
-    px, cols, rows = 4, 80, 84
+    px, cols, rows = 2.5, 128, 140
     pw, ph = cols * px, rows * px
     ox, oy = W - pw - 70, 46
     portrait = portrait_paths(photo, ox, oy, cols, rows, px)
@@ -152,7 +225,7 @@ def build_hero(photo):
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="MKRJ — Full Stack Developer">
   <defs>
-    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".28"/></pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".16"/></pattern>
     <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
     <filter id="glow" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <clipPath id="frame"><rect width="{W}" height="{H}" rx="16"/></clipPath>
