@@ -56,7 +56,7 @@ OPEN_TO    =  Full Stack  |  Backend (Node.js / TS)  |  React  |  AI Application
 
 **`[ Backend & Data ]`**
 
-<img src="https://skillicons.dev/icons?i=nodejs,express,socketio,mongodb,postgres,prisma&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,prisma&theme=dark" />
 
 **`[ DevOps & Infra ]`**
 
@@ -96,7 +96,7 @@ OPEN_TO    =  Full Stack  |  Backend (Node.js / TS)  |  React  |  AI Application
 ## `> ls /projects --sort=impact`
 
 <details open>
-<summary><b>▸ COOP-BOOKING</b> — full-stack booking & payment platform</summary>
+<summary><b>COOP-BOOKING</b> — full-stack booking & payment platform</summary>
 
 <br>
 
@@ -114,7 +114,7 @@ An online reservation system with user management, seat/room booking, online pay
 </details>
 
 <details>
-<summary><b>▸ AI Assistant / RAG System</b> — knowledge-base backed AI assistant</summary>
+<summary><b>AI Assistant / RAG System</b> — knowledge-base backed AI assistant</summary>
 
 <br>
 
