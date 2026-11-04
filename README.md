@@ -1,190 +1,160 @@
+<!-- ═══════════════════════════  HERO  ═══════════════════════════ -->
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=shark&color=0A0E14&fontColor=00D9FF&text=MKRJ&fontSize=42&desc=Full+Stack+Developer+%7C+Node.js+%2F+React&descColor=39FF88&animation=fadeIn" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0A0E14,50:003B4A,100:00D9FF&height=280&section=header&text=MKRJ&fontSize=110&fontColor=FFFFFF&fontAlignY=38&animation=twinkling&desc=Full%20Stack%20Developer%20%E2%80%A2%20Node.js%20%E2%80%A2%20React%20%E2%80%A2%20AI&descSize=20&descAlignY=60&descColor=39FF88" />
 
-</div>
+<a href="https://github.com/MKRJ0">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=800&color=00D9FF&center=true&vCenter=true&width=700&height=45&lines=%24+whoami+%E2%86%92+Full+Stack+Developer;%24+stack+%E2%86%92+React+%C2%B7+Node.js+%C2%B7+TypeScript+%C2%B7+Docker;%24+building+%E2%86%92+AI-powered+apps+%2B+SaaS;%24+status+%E2%86%92+open+to+new+roles+%F0%9F%9F%A2" alt="Typing intro" />
+</a>
 
-<div align="center">
+<br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00D9FF&center=true&vCenter=true&width=820&lines=%24+whoami+%E2%86%92+Full+Stack+Developer;%24+stack+%E2%86%92+React+%7C+Node.js+%7C+TypeScript+%7C+Docker;%24+focus+%E2%86%92+AI-powered+applications+%2B+SaaS;%24+cat+open-to.txt+%E2%86%92+Full+Stack+%2F+Backend+%2F+AI+roles" />
+<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-00D9FF?style=for-the-badge&logo=github&logoColor=00D9FF&labelColor=0A0E14" /></a>
+<img src="https://img.shields.io/badge/Based_in-Tehran-39FF88?style=for-the-badge&logo=googlemaps&logoColor=39FF88&labelColor=0A0E14" />
+<img src="https://img.shields.io/badge/Status-Open_to_work-39FF88?style=for-the-badge&logo=rocket&logoColor=39FF88&labelColor=0A0E14" />
+<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=PROFILE+VIEWS&color=00D9FF&style=for-the-badge&labelColor=0A0E14" />
 
-</div>
-
-<div align="center">
-
-<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-00D9FF?style=for-the-badge&logo=github&labelColor=0A0E14" /></a>
-
-<!-- TODO: add these once you have them, same for-the-badge style
-<a href="LINKEDIN_URL"><img src="https://img.shields.io/badge/LinkedIn-Connect-00D9FF?style=for-the-badge&logo=linkedin&labelColor=0A0E14" /></a>
-<a href="PORTFOLIO_URL"><img src="https://img.shields.io/badge/Portfolio-Visit-00D9FF?style=for-the-badge&logo=vercel&labelColor=0A0E14" /></a>
-<a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-Contact-00D9FF?style=for-the-badge&logo=gmail&labelColor=0A0E14" /></a>
+<!-- TODO: uncomment and fill in once you have them
+<a href="LINKEDIN_URL"><img src="https://img.shields.io/badge/LinkedIn-Connect-00D9FF?style=for-the-badge&logo=linkedin&logoColor=00D9FF&labelColor=0A0E14" /></a>
+<a href="PORTFOLIO_URL"><img src="https://img.shields.io/badge/Portfolio-Visit-00D9FF?style=for-the-badge&logo=vercel&logoColor=00D9FF&labelColor=0A0E14" /></a>
+<a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-Contact-00D9FF?style=for-the-badge&logo=gmail&logoColor=00D9FF&labelColor=0A0E14" /></a>
 -->
 
 </div>
 
-<div align="center">
-<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=Profile+Views&color=00D9FF&style=for-the-badge" />
-</div>
-
 <br>
 
-## `> whoami`
+<!-- ═══════════════════════════  ABOUT  ═══════════════════════════ -->
+## <img src="https://img.shields.io/badge/%3E_-whoami-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
 
-Full-stack developer focused on building production-ready applications with modern React, Node.js, Docker, and AI integrations — from turning Figma designs into pixel-accurate responsive UI, to designing full-stack architecture, real booking/payment systems, and backend-controlled AI workflows.
+> **I build production-ready products end to end** — from pixel-perfect, Figma-accurate React UIs
+> to Dockerized Node.js backends, real booking & payment systems, and backend-controlled AI workflows.
 
-```bash
-$ cat .profile
-
-ROLE     =  Full Stack Developer (Node.js / React)
-DOMAIN   =  Full Stack Web Dev  |  Backend Engineering  |  AI Apps  |  Cloud & DevOps
-STACK    =  React  |  TypeScript  |  Node.js  |  Express  |  Docker  |  MongoDB
-OPEN_TO  =  Full Stack / Backend (Node.js, TS) / React / AI Application roles
+```ts
+const mkrj = {
+  role:        "Full Stack Developer",
+  location:    "Tehran 🇮🇷",
+  frontend:    ["React", "TypeScript", "Vite", "Tailwind", "shadcn/ui"],
+  backend:     ["Node.js", "Express", "Socket.io", "REST APIs", "Auth"],
+  data:        ["MongoDB", "PostgreSQL", "Prisma"],
+  infra:       ["Docker", "Nginx", "Linux", "CI/CD"],
+  ai:          ["Flowise", "LangChain", "RAG", "Vector DBs", "Agents"],
+  currently:   "Shipping COOP-BOOKING + AI-powered backend workflows",
+  openTo:      ["Full Stack", "Backend (Node/TS)", "React", "AI Application"],
+  motto:       "Ship it clean. Ship it fast. Ship it right.",
+};
 ```
 
 <br>
 
-## `> ls /tech-stack`
-
-**Frontend**
-
-<img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,html,css&theme=dark" />
-
-**Backend**
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,ts,socketio&theme=dark" />
-
-**Databases**
-
-<img src="https://skillicons.dev/icons?i=mongodb,postgres,prisma&theme=dark" />
-
-**DevOps & Infra**
-
-<img src="https://skillicons.dev/icons?i=docker,nginx,linux,git,github&theme=dark" />
-
-**Tools**
-
-<img src="https://skillicons.dev/icons?i=vscode,postman,figma&theme=dark" />
-
-<br>
-
-## `> cat expertise.md`
-
-| Domain | Focus |
-| :-- | :-- |
-| **Frontend** | React, TypeScript, Vite, Tailwind, shadcn/ui, PWA, responsive & Figma-to-UI implementation |
-| **Backend** | Node.js, Express, REST API design, Socket.io, authentication & authorization |
-| **Databases** | MongoDB / Mongoose, PostgreSQL, Prisma & query builders |
-| **DevOps** | Docker, Docker Compose, multi-stage builds, Nginx, Linux, CI/CD concepts |
-| **AI / Automation** | Flowise, LangChain concepts, vector databases, AI agent architecture, backend-controlled AI workflows |
-
-<br>
-
-## `> ls /projects`
-
-<details open>
-<summary><b>&#9654; COOP-BOOKING &mdash; Full-stack online booking & payment platform</b></summary>
-
-Online reservation system with user management, seat/room booking, online payments, and an admin panel.
-
-| Aspect | Detail |
-| :-- | :-- |
-| **Stack** | React · TypeScript · Tailwind CSS · Vite · Node.js · Express · MongoDB · Docker |
-| **Role** | Full Stack Developer |
-| **Built** | Booking workflow, payment integration & callback handling, admin reservation system, QR code receipts, PWA install flow, backend services architecture |
-
-</details>
-
-<details>
-<summary><b>&#9654; AI Assistant / RAG System &mdash; Knowledge-base backed AI assistant</b></summary>
-
-AI system built on a knowledge base that handles response generation and confidence-based handoff to backend logic.
-
-| Aspect | Detail |
-| :-- | :-- |
-| **Stack** | Flowise · LangChain concepts · Vector search · Backend orchestration |
-| **Role** | AI Backend Developer |
-| **Built** | AI workflow design, confidence-based routing, backend-controlled decision making |
-
-</details>
-
-<br>
-
-## `> git log --stats`
+<!-- ═══════════════════════════  STACK  ═══════════════════════════ -->
+## <img src="https://img.shields.io/badge/%3E_-ls_%2Ftech--stack-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=MKRJ0&show_icons=true&hide_border=true&title_color=00D9FF&icon_color=39FF88&text_color=C9D1D9&bg_color=0A0E14" />
-
-<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=MKRJ0&hide_border=true&background=0A0E14&stroke=00D9FF&ring=39FF88&fire=00D9FF&currStreakLabel=00D9FF" />
-
-</div>
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MKRJ0&layout=compact&hide_border=true&title_color=00D9FF&text_color=C9D1D9&bg_color=0A0E14" />
-
-</div>
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=MKRJ0&theme=algolia&no-frame=true&column=7&margin-w=8&margin-h=8" />
-
-</div>
-
-<div align="center">
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=MKRJ0&theme=react-dark&bg_color=0A0E14&color=00D9FF&line=00D9FF&point=39FF88&area=true&hide_border=true" />
-
-</div>
-
-<div align="center">
-
-<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MKRJ0&theme=discord_old_blurple" />
+| | |
+| :--: | :-- |
+| **Frontend** | <img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,html,css&theme=dark" /> |
+| **Backend** | <img src="https://skillicons.dev/icons?i=nodejs,express,socketio&theme=dark" /> |
+| **Data** | <img src="https://skillicons.dev/icons?i=mongodb,postgres,prisma&theme=dark" /> |
+| **DevOps** | <img src="https://skillicons.dev/icons?i=docker,nginx,linux,git,github,githubactions&theme=dark" /> |
+| **Tools** | <img src="https://skillicons.dev/icons?i=vscode,postman,figma&theme=dark" /> |
 
 </div>
 
 <br>
 
-## `> cat current-focus.yaml`
+<!-- ═══════════════════════════  PROJECTS  ═══════════════════════════ -->
+## <img src="https://img.shields.io/badge/%3E_-ls_%2Ffeatured--projects-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🎫 COOP-BOOKING
+**Full-stack booking & payment platform**
+
+Reservations, seat/room booking, online payments, and a full admin panel. Built for real users and real money.
+
+- ⚡ End-to-end booking workflow
+- 💳 Payment gateway + callback handling
+- 🛠️ Admin reservation management
+- 🧾 QR-code receipts
+- 📱 Installable PWA
+
+<img src="https://img.shields.io/badge/React-0A0E14?style=flat-square&logo=react&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/TypeScript-0A0E14?style=flat-square&logo=typescript&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/Node.js-0A0E14?style=flat-square&logo=nodedotjs&logoColor=39FF88" /> <img src="https://img.shields.io/badge/Express-0A0E14?style=flat-square&logo=express&logoColor=FFFFFF" /> <img src="https://img.shields.io/badge/MongoDB-0A0E14?style=flat-square&logo=mongodb&logoColor=39FF88" /> <img src="https://img.shields.io/badge/Docker-0A0E14?style=flat-square&logo=docker&logoColor=00D9FF" />
+
+</td>
+<td width="50%" valign="top">
+
+### 🧠 AI Assistant / RAG System
+**Knowledge-base powered AI assistant**
+
+An assistant that answers from a knowledge base and hands off to backend logic when its confidence drops, so the AI never makes unchecked decisions.
+
+- 🔍 Vector search over the knowledge base
+- 🎯 Confidence-based routing
+- 🔒 Backend-controlled decision making
+- 🧩 Modular AI workflow design
+
+<img src="https://img.shields.io/badge/Flowise-0A0E14?style=flat-square&logo=flow&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/LangChain-0A0E14?style=flat-square&logo=langchain&logoColor=39FF88" /> <img src="https://img.shields.io/badge/Vector_DB-0A0E14?style=flat-square&logo=databricks&logoColor=00D9FF" /> <img src="https://img.shields.io/badge/Node.js-0A0E14?style=flat-square&logo=nodedotjs&logoColor=39FF88" />
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<!-- ═══════════════════════════  STATS  ═══════════════════════════ -->
+## <img src="https://img.shields.io/badge/%3E_-git_log_--stats-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
+
+<div align="center">
+
+<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MKRJ0&theme=tokyonight" />
+
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MKRJ0&theme=tokyonight" />
+<img width="49%" src="https://streak-stats.demolab.com/?user=MKRJ0&theme=tokyonight&hide_border=true&background=1A1B27&stroke=00D9FF&ring=39FF88&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=C9D1D9&dates=8B949E" />
+
+<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MKRJ0&theme=tokyonight" />
+<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MKRJ0&theme=tokyonight" />
+<img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MKRJ0&theme=tokyonight&utcOffset=3.5" />
+
+</div>
+
+<br>
+
+<!-- ═══════════════════════════  FOCUS  ═══════════════════════════ -->
+## <img src="https://img.shields.io/badge/%3E_-cat_current--focus.yaml-00D9FF?style=flat-square&labelColor=0A0E14" height="28" />
 
 ```yaml
-learning:
-  - Advanced React patterns & custom hooks
-  - React architecture & performance optimization
-  - Docker & Kubernetes / DevOps workflows
-  - AI agents and RAG architectures
-  - Production backend architecture
-
-building:
-  - COOP-BOOKING          # full-stack booking platform
-  - AI-powered backend workflows
-
-open_to:
-  - Full Stack Developer
-  - Backend Developer (Node.js / TypeScript)
-  - React Developer
-  - AI Application Developer
-  - Junior / Mid-level Software Engineer
-
-interested_in:
-  - SaaS products
-  - AI-powered applications
-  - Cloud-native systems
-  - Backend-heavy applications
+learning:      [Advanced React patterns, Performance optimization, Kubernetes, AI agents & RAG]
+building:      [COOP-BOOKING, AI-powered backend workflows]
+interested_in: [SaaS, AI-powered apps, Cloud-native systems, Backend-heavy architecture]
+open_to:       [Full Stack, Backend (Node.js/TS), React, AI Application, Junior/Mid SWE]
 ```
 
 <br>
 
-## `> connect`
+<!-- ═══════════════════════════  SNAKE  ═══════════════════════════ -->
+<div align="center">
 
-<!-- TODO: add real links once available, keep the same for-the-badge / palette style
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-00D9FF?style=for-the-badge&logo=linkedin&labelColor=0A0E14)](LINKEDIN_URL)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00D9FF?style=for-the-badge&logo=vercel&labelColor=0A0E14)](PORTFOLIO_URL)
-[![Email](https://img.shields.io/badge/Email-Contact-00D9FF?style=for-the-badge&logo=gmail&labelColor=0A0E14)](mailto:YOUR_EMAIL)
--->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MKRJ0/MKRJ0/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MKRJ0/MKRJ0/output/github-snake.svg" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/MKRJ0/MKRJ0/output/github-snake-dark.svg" />
+</picture>
 
-[![GitHub](https://img.shields.io/badge/GitHub-MKRJ0-00D9FF?style=for-the-badge&logo=github&labelColor=0A0E14)](https://github.com/MKRJ0)
+</div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=shark&color=0A0E14&fontColor=00D9FF&height=100&section=footer&animation=fadeIn" />
+<!-- ═══════════════════════════  FOOTER  ═══════════════════════════ -->
+<div align="center">
+
+<br>
+
+**`> connect`** &nbsp;·&nbsp; Let's build something that makes people say *wow*.
+
+<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-00D9FF?style=for-the-badge&logo=github&logoColor=00D9FF&labelColor=0A0E14" /></a>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:00D9FF,50:003B4A,100:0A0E14&height=140&section=footer&animation=twinkling" />
 
 </div>
