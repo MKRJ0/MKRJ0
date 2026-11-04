@@ -161,12 +161,12 @@ def build_stats(days):
 
 
 # ───────────────────────── hero / portrait ─────────────────────────
-PORTRAIT_GREENS = ["#020A05", "#05200E", "#083316", "#0C471F", "#105C28", "#157232", "#1B893D", "#22A148", "#2BBA55", "#3AD465", "#5CEA82", "#8CFAA8", "#C2FFD2", "#F0FFF4"]
+PORTRAIT_GREENS = ["#020A05", "#073A18", "#0E5F28", "#17883B", "#24B24F", "#3FDB6A", "#8CFAA8", "#E6FFEC"]
 
 
-def portrait_paths(photo, ox, oy, cols, rows, px):
+def portrait_paths(photo, ox, oy, cols, rows, px, gap=0):
     """Render a head-and-shoulders photo as a green phosphor pixel portrait."""
-    from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+    from PIL import Image
 
     im = Image.open(photo).convert("RGB")
     w, h = im.size
@@ -179,10 +179,10 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
     # weight green/blue heavily so the red studio backdrop drops to black
     r, g, b = im.split()
     lum = Image.merge("RGB", (r, g, b)).convert("L", (0.10, 0.75, 0.15, 0))
-    lum = ImageOps.autocontrast(lum, cutoff=1)
-    lum = ImageEnhance.Contrast(lum).enhance(1.25)
-    lum = lum.filter(ImageFilter.UnsharpMask(radius=1.5, percent=120, threshold=1))
-    small = lum.resize((cols, rows), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1, percent=80, threshold=0))
+    small = lum.resize((cols, rows), Image.LANCZOS)
+    # percentile tone-mapping: dark backdrop -> off, face spread over the mid/high greens
+    vals = sorted(small.getpixel((x, y)) for y in range(rows) for x in range(cols))
+    lo, hi = vals[int(0.35 * (len(vals) - 1))], vals[int(0.99 * (len(vals) - 1))]
 
     bayer = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]
     levels = len(PORTRAIT_GREENS) - 1
@@ -191,11 +191,18 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
         run_lvl, run_start = 0, 0
         for x in range(cols + 1):
             if x < cols:
-                v = (small.getpixel((x, y)) / 255) ** 0.9
+                v = (small.getpixel((x, y)) - lo) / max(1, hi - lo)
+                v = 0 if v <= 0 else min(1.0, v)
                 t = 0
-                lvl = max(0, min(levels, int(v * levels + t + 0.5)))
+                lvl = 0 if v == 0 else max(1, min(levels, int(v * levels + t + 0.5)))
             else:
                 lvl = -1
+            if gap and 0 < lvl:
+                c = px - gap
+                paths[lvl].append(f"M{ox + x * px:g} {oy + y * px:g}h{c:g}v{c:g}h-{c:g}z")
+                continue
+            if gap:
+                continue
             if lvl != run_lvl or x == cols:
                 if run_lvl > 0:
                     n = x - run_start
@@ -208,10 +215,10 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
 
 def build_hero(photo):
     W, H = 1200, 440
-    px, cols, rows = 2, 160, 175
+    px, cols, rows = 5, 64, 70
     pw, ph = cols * px, rows * px
     ox, oy = W - pw - 70, 46
-    portrait = portrait_paths(photo, ox, oy, cols, rows, px)
+    portrait = portrait_paths(photo, ox, oy, cols, rows, px, gap=1)
 
     chips = ["React", "Node.js", "TypeScript", "Docker", "AI / RAG"]
     cx, chip_svg = 70, []
@@ -244,15 +251,15 @@ def build_hero(photo):
     <linearGradient id="beamline" x1="0" x2="1"><stop offset="0" stop-color="#8CFFAA" stop-opacity="0"/><stop offset=".15" stop-color="#C2FFD2"/><stop offset=".85" stop-color="#C2FFD2"/><stop offset="1" stop-color="#8CFFAA" stop-opacity="0"/></linearGradient>
     <filter id="beamglow" x="-5%" y="-400%" width="110%" height="900%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <clipPath id="frame"><rect width="{W}" height="{H}" rx="16"/></clipPath>
-    <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="2" height="2" fill="#39FF6A" opacity=".10"/></pattern>
+    <pattern id="grid" x="{ox}" y="{oy}" width="{px}" height="{px}" patternUnits="userSpaceOnUse"><rect width="{px - 1}" height="{px - 1}" fill="#39FF6A" opacity=".06"/></pattern>
     <clipPath id="pclip"><rect x="{ox}" y="{oy}" width="{pw}" height="{ph}"/></clipPath>
     <style>
       text {{ font-family: {FONT}; }}
       .cur {{ animation: blink 1s steps(1) infinite; }}
       @keyframes blink {{ 50% {{ opacity: 0 }} }}
-      .cover {{ transform: translateY({ph}px); animation: reveal {T}s linear {D}s 1 both; }}
+      .cover {{ transform: translateY({ph}px); animation: reveal {T}s steps({rows}, end) {D}s 1 both; }}
       @keyframes reveal {{ from {{ transform: translateY(0) }} to {{ transform: translateY({ph}px) }} }}
-      .beam {{ opacity: 0; animation: beamin {T}s linear {D}s 1 both, beam 6s cubic-bezier(.45,0,.55,1) {D + T + 2}s infinite; }}
+      .beam {{ opacity: 0; animation: beamin {T}s steps({rows}, end) {D}s 1 both, beam 6s cubic-bezier(.45,0,.55,1) {D + T + 2}s infinite; }}
       @keyframes beamin {{ 0% {{ transform: translateY(0); opacity: 1 }} 97% {{ transform: translateY({ph}px); opacity: 1 }} 100% {{ transform: translateY({ph}px); opacity: 0 }} }}
       @keyframes beam {{ 0% {{ transform: translateY(0); opacity: 0 }} 8% {{ opacity: 1 }} 62% {{ transform: translateY({ph}px); opacity: 1 }} 70%,100% {{ transform: translateY({ph}px); opacity: 0 }} }}
       .ldg {{ opacity: 0; animation: ldg {T}s linear {D}s 1 both; }}
