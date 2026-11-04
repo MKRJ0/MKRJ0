@@ -206,12 +206,29 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
     )
 
 
+def portrait_image(photo, ox, oy, pw, ph):
+    """Embed the photo in full colour, cropped to head + shoulders."""
+    import base64, io
+    from PIL import Image
+    im = Image.open(photo).convert("RGB")
+    w, h = im.size
+    cw = int(w * 0.88)
+    ch = int(cw * ph / pw)
+    left = (w - cw) // 2 - int(w * 0.02)
+    top = int(h * 0.07)
+    im = im.crop((left, top, left + cw, top + ch)).resize((int(pw * 2), int(ph * 2)), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=86, optimize=True, progressive=True)
+    data = base64.b64encode(buf.getvalue()).decode()
+    return f'<image x="{ox}" y="{oy}" width="{pw}" height="{ph}" href="data:image/jpeg;base64,{data}"/>'
+
+
 def build_hero(photo):
     W, H = 1200, 440
     px, cols, rows = 2, 160, 175
     pw, ph = cols * px, rows * px
     ox, oy = W - pw - 70, 46
-    portrait = portrait_paths(photo, ox, oy, cols, rows, px)
+    portrait = portrait_image(photo, ox, oy, pw, ph)
 
     chips = ["React", "Node.js", "TypeScript", "Docker", "AI / RAG"]
     cx, chip_svg = 70, []
@@ -252,7 +269,7 @@ def build_hero(photo):
       @keyframes blink {{ 50% {{ opacity: 0 }} }}
       .cover {{ transform: translateY({ph}px); animation: reveal {T}s linear {D}s 1 both; }}
       @keyframes reveal {{ from {{ transform: translateY(0) }} to {{ transform: translateY({ph}px) }} }}
-      .beam {{ opacity: 0; animation: beamin {T}s linear {D}s 1 both, beam 6s cubic-bezier(.45,0,.55,1) {D + T + 2}s infinite; }}
+      .beam {{ opacity: 0; animation: beamin {T}s linear {D}s 1 both; }}
       @keyframes beamin {{ 0% {{ transform: translateY(0); opacity: 1 }} 97% {{ transform: translateY({ph}px); opacity: 1 }} 100% {{ transform: translateY({ph}px); opacity: 0 }} }}
       @keyframes beam {{ 0% {{ transform: translateY(0); opacity: 0 }} 8% {{ opacity: 1 }} 62% {{ transform: translateY({ph}px); opacity: 1 }} 70%,100% {{ transform: translateY({ph}px); opacity: 0 }} }}
       .ldg {{ opacity: 0; animation: ldg {T}s linear {D}s 1 both; }}
