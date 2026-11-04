@@ -2,7 +2,7 @@
 
 <img width="100%" src="./assets/contributions.svg" alt="GitHub contributions" />
 
-<img width="100%" src="./assets/hero.svg" alt="MKRJ — Full Stack Developer" />
+<img width="100%" src="./assets/hero.svg" alt="MERAJ — Full Stack Developer" />
 
 <img src="https://img.shields.io/badge/Full_Stack_Developer-Node.js_·_React-0A0203?style=flat-square&labelColor=0A0203&color=4D0E15" />
 <img src="https://img.shields.io/badge/📍-Tehran,_IR-FF2A3D?style=flat-square&labelColor=0A0203" />

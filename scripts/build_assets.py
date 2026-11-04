@@ -252,7 +252,7 @@ def build_hero(photo):
         load_svg.append(f'<text class="l{i}" x="{ox + pw - 8}" y="{oy - 8}" font-size="12" font-weight="800" fill="#FF2A3D" text-anchor="end" letter-spacing="2">LOADING {round(i * 100 / N)}%</text>')
     load_css = "\n      ".join(load_css).replace("{{", "{").replace("}}", "}")
     load_svg = "\n    ".join(load_svg)
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="MKRJ — Full Stack Developer">
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="MERAJ — Full Stack Developer">
   <defs>
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".16"/></pattern>
     <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
@@ -289,7 +289,7 @@ def build_hero(photo):
     <!-- left: identity -->
     <text x="70" y="86" font-size="14" fill="#B8434C" letter-spacing="3">&gt; HELLO, WORLD</text>
     <g class="flick" filter="url(#glow)">
-      <text x="64" y="178" font-size="104" font-weight="800" fill="#FF2A3D" letter-spacing="4">MKRJ<tspan class="cur">_</tspan></text>
+      <text x="64" y="178" font-size="104" font-weight="800" fill="#FF2A3D" letter-spacing="4">MERAJ</text>
     </g>
     <text x="70" y="226" font-size="19" font-weight="700" fill="#FFC9CE">Full Stack Developer <tspan fill="#B8434C">|</tspan> Backend Engineer <tspan fill="#B8434C">|</tspan> AI Builder</text>
     {"".join(chip_svg)}

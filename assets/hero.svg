@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="MKRJ — Full Stack Developer">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="MERAJ — Full Stack Developer">
   <defs>
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".16"/></pattern>
     <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
@@ -44,7 +44,7 @@
     <!-- left: identity -->
     <text x="70" y="86" font-size="14" fill="#B8434C" letter-spacing="3">&gt; HELLO, WORLD</text>
     <g class="flick" filter="url(#glow)">
-      <text x="64" y="178" font-size="104" font-weight="800" fill="#FF2A3D" letter-spacing="4">MKRJ<tspan class="cur">_</tspan></text>
+      <text x="64" y="178" font-size="104" font-weight="800" fill="#FF2A3D" letter-spacing="4">MERAJ</text>
     </g>
     <text x="70" y="226" font-size="19" font-weight="700" fill="#FFC9CE">Full Stack Developer <tspan fill="#B8434C">|</tspan> Backend Engineer <tspan fill="#B8434C">|</tspan> AI Builder</text>
     <rect x="70" y="268" width="72" height="34" rx="4" fill="#FF2A3D" fill-opacity=".06" stroke="#FF2A3D" stroke-width="1.5"/><text x="106.0" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#FF2A3D">React</text><rect x="154" y="268" width="92" height="34" rx="4" fill="#FF2A3D" fill-opacity=".06" stroke="#FF2A3D" stroke-width="1.5"/><text x="200.0" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#FF2A3D">Node.js</text><rect x="258" y="268" width="122" height="34" rx="4" fill="#FF2A3D" fill-opacity=".06" stroke="#FF2A3D" stroke-width="1.5"/><text x="319.0" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#FF2A3D">TypeScript</text><rect x="392" y="268" width="82" height="34" rx="4" fill="#FF2A3D" fill-opacity=".06" stroke="#FF2A3D" stroke-width="1.5"/><text x="433.0" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#FF2A3D">Docker</text><rect x="486" y="268" width="102" height="34" rx="4" fill="#FF2A3D" fill-opacity=".06" stroke="#FF2A3D" stroke-width="1.5"/><text x="537.0" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#FF2A3D">AI / RAG</text>
