@@ -161,7 +161,7 @@ def build_stats(days):
 
 
 # ───────────────────────── hero / portrait ─────────────────────────
-PORTRAIT_GREENS = ["#020A05", "#062A13", "#0B4720", "#11662E", "#1A8A3E", "#25B04F", "#3DDB68", "#8CFFAA", "#E2FFE9"]
+PORTRAIT_GREENS = ["#020A05", "#05200E", "#083316", "#0C471F", "#105C28", "#157232", "#1B893D", "#22A148", "#2BBA55", "#3AD465", "#5CEA82", "#8CFAA8", "#C2FFD2", "#F0FFF4"]
 
 
 def portrait_paths(photo, ox, oy, cols, rows, px):
@@ -181,8 +181,8 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
     lum = Image.merge("RGB", (r, g, b)).convert("L", (0.10, 0.75, 0.15, 0))
     lum = ImageOps.autocontrast(lum, cutoff=1)
     lum = ImageEnhance.Contrast(lum).enhance(1.25)
-    lum = lum.filter(ImageFilter.UnsharpMask(radius=2, percent=160, threshold=2))
-    small = lum.resize((cols, rows), Image.LANCZOS)
+    lum = lum.filter(ImageFilter.UnsharpMask(radius=1.5, percent=120, threshold=1))
+    small = lum.resize((cols, rows), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1, percent=80, threshold=0))
 
     bayer = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]
     levels = len(PORTRAIT_GREENS) - 1
@@ -192,7 +192,7 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
         for x in range(cols + 1):
             if x < cols:
                 v = (small.getpixel((x, y)) / 255) ** 0.9
-                t = ((bayer[y % 4][x % 4] + 0.5) / 16 - 0.5) * 0.6
+                t = 0
                 lvl = max(0, min(levels, int(v * levels + t + 0.5)))
             else:
                 lvl = -1
@@ -208,7 +208,7 @@ def portrait_paths(photo, ox, oy, cols, rows, px):
 
 def build_hero(photo):
     W, H = 1200, 440
-    px, cols, rows = 2.5, 128, 140
+    px, cols, rows = 2, 160, 175
     pw, ph = cols * px, rows * px
     ox, oy = W - pw - 70, 46
     portrait = portrait_paths(photo, ox, oy, cols, rows, px)
@@ -256,19 +256,19 @@ def build_hero(photo):
     <circle class="pulse" cx="76" cy="389" r="5" fill="#39FF6A"/>
     <text x="90" y="394" font-size="14" fill="#2E9E52">Tehran, IR  ·  open to work  ·  github.com/{USER}</text>
 
+    <rect width="{W}" height="{H}" fill="url(#vig)"/>
+
     <!-- right: portrait -->
     <rect x="{ox - 12}" y="{oy - 12}" width="{pw + 24}" height="{ph + 24}" fill="{PANEL}" stroke="#39FF6A" stroke-opacity=".35"/>
-    <g clip-path="url(#pclip)">
+    <g clip-path="url(#pclip)" shape-rendering="crispEdges">
       <rect x="{ox}" y="{oy}" width="{pw}" height="{ph}" fill="{PORTRAIT_GREENS[0]}"/>
       {portrait}
-      <rect x="{ox}" y="{oy}" width="{pw}" height="{ph}" fill="url(#scan)"/>
-      <rect class="beam" x="{ox}" y="{oy - 30}" width="{pw}" height="30" fill="#39FF6A" opacity=".12"/>
+      <rect class="beam" x="{ox}" y="{oy - 30}" width="{pw}" height="18" fill="#39FF6A" opacity=".07"/>
     </g>
     <rect x="{ox + pw - 96}" y="{oy - 24}" width="96" height="22" fill="#39FF6A"/>
     <text x="{ox + pw - 48}" y="{oy - 8}" font-size="12" font-weight="800" fill="{BG}" text-anchor="middle" letter-spacing="2">COMPLETE</text>
     <text x="{ox}" y="{oy + ph + 30}" font-size="12" fill="#2E9E52">&gt; portrait.svg loaded // terminal profile</text>
 
-    <rect width="{W}" height="{H}" fill="url(#vig)"/>
   </g>
   <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="#39FF6A" stroke-opacity=".25"/>
 </svg>'''
