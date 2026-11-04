@@ -66,7 +66,7 @@ def build_contributions():
   <style>
     text {{ font-family: {FONT}; }}
     .on {{ animation: glow 3.2s ease-in-out infinite; }}
-    @keyframes glow {{ 0%,100% {{ filter: none }} 50% {{ filter: brightness(1.6) drop-shadow(0 0 4px #FF2A3D) }} }}
+    @keyframes glow {{ 0%,100% {{ filter: none }} 50% {{ filter: brightness(1.25) drop-shadow(0 0 2px rgba(255,42,61,.45)) }} }}
     .cur {{ animation: blink 1s steps(1) infinite; }}
     @keyframes blink {{ 50% {{ opacity: 0 }} }}
   </style>
