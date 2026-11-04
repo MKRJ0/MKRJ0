@@ -4,19 +4,19 @@
 
 <img width="100%" src="./assets/hero.svg" alt="MKRJ — Full Stack Developer" />
 
-<img src="https://img.shields.io/badge/Full_Stack_Developer-Node.js_·_React-020804?style=flat-square&labelColor=020804&color=0E4D24" />
-<img src="https://img.shields.io/badge/📍-Tehran,_IR-39FF6A?style=flat-square&labelColor=020804" />
-<img src="https://img.shields.io/badge/●-Open_to_work-39FF6A?style=flat-square&labelColor=020804" />
+<img src="https://img.shields.io/badge/Full_Stack_Developer-Node.js_·_React-0A0203?style=flat-square&labelColor=0A0203&color=4D0E15" />
+<img src="https://img.shields.io/badge/📍-Tehran,_IR-FF2A3D?style=flat-square&labelColor=0A0203" />
+<img src="https://img.shields.io/badge/●-Open_to_work-FF2A3D?style=flat-square&labelColor=0A0203" />
 
 <br><br>
 
-<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-39FF6A?style=for-the-badge&logo=github&logoColor=39FF6A&labelColor=020804" /></a>
+<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-FF2A3D?style=for-the-badge&logo=github&logoColor=FF2A3D&labelColor=0A0203" /></a>
 
 <br><br>
 
-<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=Profile+Views&color=39FF6A&style=flat-square&labelColor=020804" />
-<a href="https://github.com/MKRJ0?tab=followers"><img src="https://img.shields.io/github/followers/MKRJ0?label=Followers&style=flat-square&color=39FF6A&labelColor=020804&logo=github" /></a>
-<a href="https://github.com/MKRJ0?tab=repositories"><img src="https://img.shields.io/github/stars/MKRJ0?affiliations=OWNER&label=Stars&style=flat-square&color=39FF6A&labelColor=020804&logo=github" /></a>
+<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=Profile+Views&color=FF2A3D&style=flat-square&labelColor=0A0203" />
+<a href="https://github.com/MKRJ0?tab=followers"><img src="https://img.shields.io/github/followers/MKRJ0?label=Followers&style=flat-square&color=FF2A3D&labelColor=0A0203&logo=github" /></a>
+<a href="https://github.com/MKRJ0?tab=repositories"><img src="https://img.shields.io/github/stars/MKRJ0?affiliations=OWNER&label=Stars&style=flat-square&color=FF2A3D&labelColor=0A0203&logo=github" /></a>
 
 </div>
 
@@ -68,13 +68,13 @@ OPEN_TO    =  Full Stack  |  Backend (Node.js / TS)  |  React  |  AI Application
 
 **`[ AI & Automation ]`**
 
-<img src="https://img.shields.io/badge/Flowise-020804?style=flat-square&labelColor=020804&color=39FF6A" />
-<img src="https://img.shields.io/badge/LangChain-020804?style=flat-square&labelColor=020804&color=39FF6A" />
-<img src="https://img.shields.io/badge/RAG-020804?style=flat-square&labelColor=020804&color=39FF6A" />
-<img src="https://img.shields.io/badge/Vector_DBs-020804?style=flat-square&labelColor=020804&color=39FF6A" />
-<img src="https://img.shields.io/badge/AI_Agents-020804?style=flat-square&labelColor=020804&color=39FF6A" />
-<img src="https://img.shields.io/badge/shadcn%2Fui-020804?style=flat-square&labelColor=020804&color=39FF6A" />
-<img src="https://img.shields.io/badge/PWA-020804?style=flat-square&labelColor=020804&color=39FF6A" />
+<img src="https://img.shields.io/badge/Flowise-0A0203?style=flat-square&labelColor=0A0203&color=FF2A3D" />
+<img src="https://img.shields.io/badge/LangChain-0A0203?style=flat-square&labelColor=0A0203&color=FF2A3D" />
+<img src="https://img.shields.io/badge/RAG-0A0203?style=flat-square&labelColor=0A0203&color=FF2A3D" />
+<img src="https://img.shields.io/badge/Vector_DBs-0A0203?style=flat-square&labelColor=0A0203&color=FF2A3D" />
+<img src="https://img.shields.io/badge/AI_Agents-0A0203?style=flat-square&labelColor=0A0203&color=FF2A3D" />
+<img src="https://img.shields.io/badge/shadcn%2Fui-0A0203?style=flat-square&labelColor=0A0203&color=FF2A3D" />
+<img src="https://img.shields.io/badge/PWA-0A0203?style=flat-square&labelColor=0A0203&color=FF2A3D" />
 
 </div>
 
@@ -178,7 +178,7 @@ open_to:
 
 <div align="center">
 
-<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-39FF6A?style=for-the-badge&logo=github&logoColor=39FF6A&labelColor=020804" /></a>
+<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-FF2A3D?style=for-the-badge&logo=github&logoColor=FF2A3D&labelColor=0A0203" /></a>
 
 <br><br>
 
