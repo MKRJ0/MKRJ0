@@ -228,14 +228,17 @@ def build_hero(photo):
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".16"/></pattern>
     <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
     <filter id="glow" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="trail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39FF6A" stop-opacity="0"/><stop offset="1" stop-color="#39FF6A" stop-opacity=".22"/></linearGradient>
+    <linearGradient id="beamline" x1="0" x2="1"><stop offset="0" stop-color="#8CFFAA" stop-opacity="0"/><stop offset=".15" stop-color="#C2FFD2"/><stop offset=".85" stop-color="#C2FFD2"/><stop offset="1" stop-color="#8CFFAA" stop-opacity="0"/></linearGradient>
+    <filter id="beamglow" x="-5%" y="-400%" width="110%" height="900%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <clipPath id="frame"><rect width="{W}" height="{H}" rx="16"/></clipPath>
     <clipPath id="pclip"><rect x="{ox}" y="{oy}" width="{pw}" height="{ph}"/></clipPath>
     <style>
       text {{ font-family: {FONT}; }}
       .cur {{ animation: blink 1s steps(1) infinite; }}
       @keyframes blink {{ 50% {{ opacity: 0 }} }}
-      .beam {{ animation: beam 4.5s linear infinite; }}
-      @keyframes beam {{ from {{ transform: translateY(-40px) }} to {{ transform: translateY({ph + 40}px) }} }}
+      .beam {{ animation: beam 5s cubic-bezier(.45,0,.55,1) infinite; }}
+      @keyframes beam {{ 0% {{ transform: translateY(0); opacity: 0 }} 8% {{ opacity: 1 }} 62% {{ transform: translateY({ph}px); opacity: 1 }} 70%,100% {{ transform: translateY({ph}px); opacity: 0 }} }}
       .flick {{ animation: flick 6s steps(1) infinite; }}
       @keyframes flick {{ 0%,95%,100% {{ opacity: 1 }} 96% {{ opacity: .55 }} 97% {{ opacity: 1 }} 98% {{ opacity: .7 }} }}
       .pulse {{ animation: pulse 2s ease-in-out infinite; }}
@@ -263,7 +266,10 @@ def build_hero(photo):
     <g clip-path="url(#pclip)" shape-rendering="crispEdges">
       <rect x="{ox}" y="{oy}" width="{pw}" height="{ph}" fill="{PORTRAIT_GREENS[0]}"/>
       {portrait}
-      <rect class="beam" x="{ox}" y="{oy - 30}" width="{pw}" height="18" fill="#39FF6A" opacity=".07"/>
+      <g class="beam" style="mix-blend-mode:screen">
+        <rect x="{ox}" y="{oy - 70}" width="{pw}" height="70" fill="url(#trail)"/>
+        <rect x="{ox}" y="{oy - 3}" width="{pw}" height="3" fill="url(#beamline)" filter="url(#beamglow)"/>
+      </g>
     </g>
     <rect x="{ox + pw - 96}" y="{oy - 24}" width="96" height="22" fill="#39FF6A"/>
     <text x="{ox + pw - 48}" y="{oy - 8}" font-size="12" font-weight="800" fill="{BG}" text-anchor="middle" letter-spacing="2">COMPLETE</text>
