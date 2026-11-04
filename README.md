@@ -1,131 +1,143 @@
-<!-- ═══════════════════════════  HERO  ═══════════════════════════ -->
 <div align="center">
 
 <img width="100%" src="./assets/contributions.svg" alt="GitHub contributions" />
 
 <img width="100%" src="./assets/hero.svg" alt="MKRJ — Full Stack Developer" />
 
-<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-39FF6A?style=for-the-badge&logo=github&logoColor=39FF6A&labelColor=020804" /></a>
-<img src="https://img.shields.io/badge/Based_in-Tehran-7BC98F?style=for-the-badge&logo=googlemaps&logoColor=7BC98F&labelColor=020804" />
-<img src="https://img.shields.io/badge/Status-Open_to_work-7BC98F?style=for-the-badge&logo=rocket&logoColor=7BC98F&labelColor=020804" />
-<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=PROFILE+VIEWS&color=39FF6A&style=for-the-badge&labelColor=020804" />
+<img src="https://img.shields.io/badge/Full_Stack_Developer-Node.js_·_React-020804?style=flat-square&labelColor=020804&color=0E4D24" />
+<img src="https://img.shields.io/badge/📍-Tehran,_IR-39FF6A?style=flat-square&labelColor=020804" />
+<img src="https://img.shields.io/badge/●-Open_to_work-39FF6A?style=flat-square&labelColor=020804" />
 
-<!-- TODO: uncomment and fill in once you have them
-<a href="LINKEDIN_URL"><img src="https://img.shields.io/badge/LinkedIn-Connect-39FF6A?style=for-the-badge&logo=linkedin&logoColor=39FF6A&labelColor=020804" /></a>
-<a href="PORTFOLIO_URL"><img src="https://img.shields.io/badge/Portfolio-Visit-39FF6A?style=for-the-badge&logo=vercel&logoColor=39FF6A&labelColor=020804" /></a>
-<a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-Contact-39FF6A?style=for-the-badge&logo=gmail&logoColor=39FF6A&labelColor=020804" /></a>
--->
+<br><br>
+
+<a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-39FF6A?style=for-the-badge&logo=github&logoColor=39FF6A&labelColor=020804" /></a>
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=MKRJ0&label=Profile+Views&color=39FF6A&style=flat-square&labelColor=020804" />
+<a href="https://github.com/MKRJ0?tab=followers"><img src="https://img.shields.io/github/followers/MKRJ0?label=Followers&style=flat-square&color=39FF6A&labelColor=020804&logo=github" /></a>
+<a href="https://github.com/MKRJ0?tab=repositories"><img src="https://img.shields.io/github/stars/MKRJ0?affiliations=OWNER&label=Stars&style=flat-square&color=39FF6A&labelColor=020804&logo=github" /></a>
 
 </div>
 
 <br>
 
-<!-- ═══════════════════════════  ABOUT  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-whoami-39FF6A?style=flat-square&labelColor=020804" height="28" />
+## `> whoami`
 
-> **I build production-ready products end to end** — from pixel-perfect, Figma-accurate React UIs
-> to Dockerized Node.js backends, real booking & payment systems, and backend-controlled AI workflows.
+Full-stack developer building **production-ready applications** with React, Node.js, Docker and AI integrations: from pixel-accurate, Figma-faithful UIs to booking & payment systems and backend-controlled AI workflows.
 
-```ts
-const mkrj = {
-  role:        "Full Stack Developer",
-  location:    "Tehran 🇮🇷",
-  frontend:    ["React", "TypeScript", "Vite", "Tailwind", "shadcn/ui"],
-  backend:     ["Node.js", "Express", "Socket.io", "REST APIs", "Auth"],
-  data:        ["MongoDB", "PostgreSQL", "Prisma"],
-  infra:       ["Docker", "Nginx", "Linux", "CI/CD"],
-  ai:          ["Flowise", "LangChain", "RAG", "Vector DBs", "Agents"],
-  currently:   "Shipping COOP-BOOKING + AI-powered backend workflows",
-  openTo:      ["Full Stack", "Backend (Node/TS)", "React", "AI Application"],
-  motto:       "Ship it clean. Ship it fast. Ship it right.",
-};
+I care about the boring parts that make software real: clean APIs, auth that holds up, containers that deploy the same everywhere, and AI that stays under the backend's control.
+
+```bash
+$ cat .profile
+
+ROLE       =  Full Stack Developer (Node.js / React)
+DOMAIN     =  Web apps  |  Backend engineering  |  AI apps  |  DevOps
+STACK      =  React  |  TypeScript  |  Node.js  |  Express  |  MongoDB  |  Docker
+AI         =  Flowise  |  LangChain  |  RAG  |  Vector DBs  |  Agents
+BUILDING   =  COOP-BOOKING  |  AI-powered backend workflows
+LOCATION   =  Tehran, IR
+OPEN_TO    =  Full Stack  |  Backend (Node.js / TS)  |  React  |  AI Application roles
 ```
 
 <br>
 
-<!-- ═══════════════════════════  STACK  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-ls_%2Ftech--stack-39FF6A?style=flat-square&labelColor=020804" height="28" />
+## `> ls /tech-stack`
 
 <div align="center">
 
-| | |
-| :--: | :-- |
-| **Frontend** | <img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,html,css&theme=dark" /> |
-| **Backend** | <img src="https://skillicons.dev/icons?i=nodejs,express,socketio&theme=dark" /> |
-| **Data** | <img src="https://skillicons.dev/icons?i=mongodb,postgres,prisma&theme=dark" /> |
-| **DevOps** | <img src="https://skillicons.dev/icons?i=docker,nginx,linux,git,github,githubactions&theme=dark" /> |
-| **Tools** | <img src="https://skillicons.dev/icons?i=vscode,postman,figma&theme=dark" /> |
+**`[ Languages ]`**
+
+<img src="https://skillicons.dev/icons?i=ts,js,python,html,css&theme=dark" />
+
+**`[ Frontend ]`**
+
+<img src="https://skillicons.dev/icons?i=react,vite,tailwind&theme=dark" />
+
+**`[ Backend & Data ]`**
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,socketio,mongodb,postgres,prisma&theme=dark" />
+
+**`[ DevOps & Infra ]`**
+
+<img src="https://skillicons.dev/icons?i=docker,nginx,linux,git,github,githubactions&theme=dark" />
+
+**`[ Tools ]`**
+
+<img src="https://skillicons.dev/icons?i=vscode,postman,figma&theme=dark" />
+
+**`[ AI & Automation ]`**
+
+<img src="https://img.shields.io/badge/Flowise-020804?style=flat-square&labelColor=020804&color=39FF6A" />
+<img src="https://img.shields.io/badge/LangChain-020804?style=flat-square&labelColor=020804&color=39FF6A" />
+<img src="https://img.shields.io/badge/RAG-020804?style=flat-square&labelColor=020804&color=39FF6A" />
+<img src="https://img.shields.io/badge/Vector_DBs-020804?style=flat-square&labelColor=020804&color=39FF6A" />
+<img src="https://img.shields.io/badge/AI_Agents-020804?style=flat-square&labelColor=020804&color=39FF6A" />
+<img src="https://img.shields.io/badge/shadcn%2Fui-020804?style=flat-square&labelColor=020804&color=39FF6A" />
+<img src="https://img.shields.io/badge/PWA-020804?style=flat-square&labelColor=020804&color=39FF6A" />
 
 </div>
 
 <br>
 
-<!-- ═══════════════════════════  PROJECTS  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-ls_%2Ffeatured--projects-39FF6A?style=flat-square&labelColor=020804" height="28" />
+## `> cat expertise.json`
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🎫 COOP-BOOKING
-**Full-stack booking & payment platform**
-
-Reservations, seat/room booking, online payments, and a full admin panel. Built for real users and real money.
-
-- ⚡ End-to-end booking workflow
-- 💳 Payment gateway + callback handling
-- 🛠️ Admin reservation management
-- 🧾 QR-code receipts
-- 📱 Installable PWA
-
-<img src="https://img.shields.io/badge/React-020804?style=flat-square&logo=react&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/TypeScript-020804?style=flat-square&logo=typescript&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/Node.js-020804?style=flat-square&logo=nodedotjs&logoColor=7BC98F" /> <img src="https://img.shields.io/badge/Express-020804?style=flat-square&logo=express&logoColor=FFFFFF" /> <img src="https://img.shields.io/badge/MongoDB-020804?style=flat-square&logo=mongodb&logoColor=7BC98F" /> <img src="https://img.shields.io/badge/Docker-020804?style=flat-square&logo=docker&logoColor=39FF6A" />
-
-</td>
-<td width="50%" valign="top">
-
-### 🧠 AI Assistant / RAG System
-**Knowledge-base powered AI assistant**
-
-An assistant that answers from a knowledge base and hands off to backend logic when its confidence drops, so the AI never makes unchecked decisions.
-
-- 🔍 Vector search over the knowledge base
-- 🎯 Confidence-based routing
-- 🔒 Backend-controlled decision making
-- 🧩 Modular AI workflow design
-
-<img src="https://img.shields.io/badge/Flowise-020804?style=flat-square&logo=flow&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/LangChain-020804?style=flat-square&logo=langchain&logoColor=7BC98F" /> <img src="https://img.shields.io/badge/Vector_DB-020804?style=flat-square&logo=databricks&logoColor=39FF6A" /> <img src="https://img.shields.io/badge/Node.js-020804?style=flat-square&logo=nodedotjs&logoColor=7BC98F" />
-
-</td>
-</tr>
-</table>
+| Domain | Focus | Details |
+| :-- | :-- | :-- |
+| **Frontend** | React · TypeScript · Vite | Tailwind, shadcn/ui, PWA, responsive & Figma-to-UI implementation |
+| **Backend** | Node.js · Express | REST API design, Socket.io real-time, authentication & authorization |
+| **Payments & Booking** | Transactional flows | Payment gateway integration, callback handling, reservation logic, QR receipts |
+| **Databases** | MongoDB · PostgreSQL | Mongoose, Prisma, schema design for booking & admin systems |
+| **DevOps** | Docker · Nginx · Linux | Docker Compose, multi-stage builds, reverse proxy, CI/CD |
+| **AI / Automation** | Flowise · LangChain | RAG, vector search, agent architecture, backend-controlled AI decisions |
 
 <br>
 
-<!-- ═══════════════════════════  STATS  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-git_log_--stats-39FF6A?style=flat-square&labelColor=020804" height="28" />
+## `> ls /projects --sort=impact`
+
+<details open>
+<summary><b>▸ COOP-BOOKING</b> — full-stack booking & payment platform</summary>
+
+<br>
+
+An online reservation system with user management, seat/room booking, online payments and an admin panel. Built for real users and real money.
+
+| Aspect | Detail |
+| :-- | :-- |
+| **Stack** | React · TypeScript · Tailwind · Vite · Node.js · Express · MongoDB · Docker |
+| **Role** | Full Stack Developer |
+| **Payments** | Gateway integration with server-side callback verification |
+| **Admin** | Reservation management system for operators |
+| **Extras** | QR-code receipts · installable PWA |
+| **Architecture** | Containerized backend services |
+
+</details>
+
+<details>
+<summary><b>▸ AI Assistant / RAG System</b> — knowledge-base backed AI assistant</summary>
+
+<br>
+
+An assistant that answers from a knowledge base and hands off to backend logic when its confidence drops, so the AI never makes unchecked decisions.
+
+| Aspect | Detail |
+| :-- | :-- |
+| **Stack** | Flowise · LangChain concepts · Vector search · Node.js orchestration |
+| **Role** | AI Backend Developer |
+| **Routing** | Confidence-based handoff from AI to backend logic |
+| **Control** | Backend owns every decision; the model only proposes |
+
+</details>
+
+<br>
+
+## `> git stats --global`
 
 <div align="center">
 
 <img width="100%" src="./assets/stats.svg" alt="GitHub stats" />
 
-</div>
-
-<br>
-
-<!-- ═══════════════════════════  FOCUS  ═══════════════════════════ -->
-## <img src="https://img.shields.io/badge/%3E_-cat_current--focus.yaml-39FF6A?style=flat-square&labelColor=020804" height="28" />
-
-```yaml
-learning:      [Advanced React patterns, Performance optimization, Kubernetes, AI agents & RAG]
-building:      [COOP-BOOKING, AI-powered backend workflows]
-interested_in: [SaaS, AI-powered apps, Cloud-native systems, Backend-heavy architecture]
-open_to:       [Full Stack, Backend (Node.js/TS), React, AI Application, Junior/Mid SWE]
-```
-
-<br>
-
-<!-- ═══════════════════════════  SNAKE  ═══════════════════════════ -->
-<div align="center">
+<br><br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MKRJ0/MKRJ0/output/github-snake-dark.svg" />
@@ -135,15 +147,41 @@ open_to:       [Full Stack, Backend (Node.js/TS), React, AI Application, Junior/
 
 </div>
 
-<!-- ═══════════════════════════  FOOTER  ═══════════════════════════ -->
-<div align="center">
+<br>
+
+## `> cat current-focus.yaml`
+
+```yaml
+learning:
+  - Advanced React patterns & performance optimization
+  - Kubernetes & DevOps workflows
+  - Production backend architecture
+
+building:
+  - COOP-BOOKING            # full-stack booking & payment platform
+  - AI-powered backend workflows
+
+exploring:
+  - AI agents & RAG architectures
+  - SaaS & cloud-native systems
+
+open_to:
+  - Full Stack Developer
+  - Backend Developer (Node.js / TypeScript)
+  - React Developer
+  - AI Application Developer
+```
 
 <br>
 
-**`> connect`** &nbsp;·&nbsp; Let's build something that makes people say *wow*.
+## `> connect`
+
+<div align="center">
 
 <a href="https://github.com/MKRJ0"><img src="https://img.shields.io/badge/GitHub-MKRJ0-39FF6A?style=for-the-badge&logo=github&logoColor=39FF6A&labelColor=020804" /></a>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:39FF6A,50:0E4D24,100:020804&height=140&section=footer&animation=twinkling" />
+<br><br>
+
+<code>// ship it clean. ship it fast. ship it right.</code>
 
 </div>
