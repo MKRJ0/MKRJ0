@@ -1,7 +1,7 @@
 <!-- ═══════════════════════════  HERO  ═══════════════════════════ -->
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0A0E14,50:003B4A,100:00D9FF&height=280&section=header&text=MKRJ&fontSize=110&fontColor=FFFFFF&fontAlignY=38&animation=twinkling&desc=Full%20Stack%20Developer%20%E2%80%A2%20Node.js%20%E2%80%A2%20React%20%E2%80%A2%20AI&descSize=20&descAlignY=60&descColor=39FF88" />
+<a href="https://github.com/MKRJ0"><img width="100%" src="./assets/header.svg" alt="MKRJ — Full Stack Developer" /></a>
 
 <a href="https://github.com/MKRJ0">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=800&color=00D9FF&center=true&vCenter=true&width=700&height=45&lines=%24+whoami+%E2%86%92+Full+Stack+Developer;%24+stack+%E2%86%92+React+%C2%B7+Node.js+%C2%B7+TypeScript+%C2%B7+Docker;%24+building+%E2%86%92+AI-powered+apps+%2B+SaaS;%24+status+%E2%86%92+open+to+new+roles+%F0%9F%9F%A2" alt="Typing intro" />
