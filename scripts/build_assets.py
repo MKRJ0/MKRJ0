@@ -223,6 +223,18 @@ def build_hero(photo):
         )
         cx += w + 12
 
+    # first-load reveal: the scan line uncovers the portrait once, the tag counts up to COMPLETE.
+    # Base styles are the FINAL state, so renderers without CSS animation show the finished portrait.
+    D, T, N = 0.6, 3.6, 10
+    load_css, load_svg = [], []
+    for i in range(N):
+        a, b = i * 100 / N, (i + 1) * 100 / N
+        frames = (f"0%,{b - .01:.2f}% {{{{ opacity: 1 }}}}" if i == 0 else
+                  f"0%,{a - .01:.2f}% {{{{ opacity: 0 }}}} {a:.2f}%,{b - .01:.2f}% {{{{ opacity: 1 }}}}") + f" {b:.2f}%,100% {{{{ opacity: 0 }}}}"
+        load_css.append(f".l{i} {{{{ opacity: 0; animation: l{i} {T}s linear {D}s 1 both; }}}} @keyframes l{i} {{{{ {frames} }}}}")
+        load_svg.append(f'<text class="l{i}" x="{ox + pw - 8}" y="{oy - 8}" font-size="12" font-weight="800" fill="#39FF6A" text-anchor="end" letter-spacing="2">LOADING {round(i * 100 / N)}%</text>')
+    load_css = "\n      ".join(load_css).replace("{{", "{").replace("}}", "}")
+    load_svg = "\n    ".join(load_svg)
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="MKRJ — Full Stack Developer">
   <defs>
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".16"/></pattern>
@@ -232,13 +244,22 @@ def build_hero(photo):
     <linearGradient id="beamline" x1="0" x2="1"><stop offset="0" stop-color="#8CFFAA" stop-opacity="0"/><stop offset=".15" stop-color="#C2FFD2"/><stop offset=".85" stop-color="#C2FFD2"/><stop offset="1" stop-color="#8CFFAA" stop-opacity="0"/></linearGradient>
     <filter id="beamglow" x="-5%" y="-400%" width="110%" height="900%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <clipPath id="frame"><rect width="{W}" height="{H}" rx="16"/></clipPath>
+    <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="2" height="2" fill="#39FF6A" opacity=".10"/></pattern>
     <clipPath id="pclip"><rect x="{ox}" y="{oy}" width="{pw}" height="{ph}"/></clipPath>
     <style>
       text {{ font-family: {FONT}; }}
       .cur {{ animation: blink 1s steps(1) infinite; }}
       @keyframes blink {{ 50% {{ opacity: 0 }} }}
-      .beam {{ animation: beam 5s cubic-bezier(.45,0,.55,1) infinite; }}
+      .cover {{ transform: translateY({ph}px); animation: reveal {T}s linear {D}s 1 both; }}
+      @keyframes reveal {{ from {{ transform: translateY(0) }} to {{ transform: translateY({ph}px) }} }}
+      .beam {{ opacity: 0; animation: beamin {T}s linear {D}s 1 both, beam 6s cubic-bezier(.45,0,.55,1) {D + T + 2}s infinite; }}
+      @keyframes beamin {{ 0% {{ transform: translateY(0); opacity: 1 }} 97% {{ transform: translateY({ph}px); opacity: 1 }} 100% {{ transform: translateY({ph}px); opacity: 0 }} }}
       @keyframes beam {{ 0% {{ transform: translateY(0); opacity: 0 }} 8% {{ opacity: 1 }} 62% {{ transform: translateY({ph}px); opacity: 1 }} 70%,100% {{ transform: translateY({ph}px); opacity: 0 }} }}
+      .ldg {{ opacity: 0; animation: ldg {T}s linear {D}s 1 both; }}
+      @keyframes ldg {{ 0%,99.9% {{ opacity: 1 }} 100% {{ opacity: 0 }} }}
+      .done {{ opacity: 1; animation: done {T}s linear {D}s 1 both; }}
+      @keyframes done {{ 0%,99.9% {{ opacity: 0 }} 100% {{ opacity: 1 }} }}
+      {load_css}
       .flick {{ animation: flick 6s steps(1) infinite; }}
       @keyframes flick {{ 0%,95%,100% {{ opacity: 1 }} 96% {{ opacity: .55 }} 97% {{ opacity: 1 }} 98% {{ opacity: .7 }} }}
       .pulse {{ animation: pulse 2s ease-in-out infinite; }}
@@ -266,14 +287,25 @@ def build_hero(photo):
     <g clip-path="url(#pclip)" shape-rendering="crispEdges">
       <rect x="{ox}" y="{oy}" width="{pw}" height="{ph}" fill="{PORTRAIT_GREENS[0]}"/>
       {portrait}
+      <g class="cover">
+        <rect x="{ox}" y="{oy}" width="{pw}" height="{ph}" fill="{PORTRAIT_GREENS[0]}"/>
+        <rect x="{ox}" y="{oy}" width="{pw}" height="{ph}" fill="url(#grid)"/>
+      </g>
       <g class="beam" style="mix-blend-mode:screen">
         <rect x="{ox}" y="{oy - 70}" width="{pw}" height="70" fill="url(#trail)"/>
         <rect x="{ox}" y="{oy - 3}" width="{pw}" height="3" fill="url(#beamline)" filter="url(#beamglow)"/>
       </g>
     </g>
-    <rect x="{ox + pw - 96}" y="{oy - 24}" width="96" height="22" fill="#39FF6A"/>
-    <text x="{ox + pw - 48}" y="{oy - 8}" font-size="12" font-weight="800" fill="{BG}" text-anchor="middle" letter-spacing="2">COMPLETE</text>
-    <text x="{ox}" y="{oy + ph + 30}" font-size="12" fill="#2E9E52">&gt; portrait.svg loaded // terminal profile</text>
+    <g class="done">
+      <rect x="{ox + pw - 96}" y="{oy - 24}" width="96" height="22" fill="#39FF6A"/>
+      <text x="{ox + pw - 48}" y="{oy - 8}" font-size="12" font-weight="800" fill="{BG}" text-anchor="middle" letter-spacing="2">COMPLETE</text>
+      <text x="{ox}" y="{oy + ph + 30}" font-size="12" fill="#2E9E52">&gt; portrait.svg loaded // terminal profile</text>
+    </g>
+    <g class="ldg">
+      <rect x="{ox + pw - 140}" y="{oy - 24}" width="140" height="22" fill="{BG}" stroke="#39FF6A"/>
+      <text x="{ox}" y="{oy + ph + 30}" font-size="12" fill="#2E9E52">&gt; scanning portrait.svg ...<tspan class="cur" fill="#39FF6A"> █</tspan></text>
+    </g>
+    {load_svg}
 
   </g>
   <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="#39FF6A" stroke-opacity=".25"/>
